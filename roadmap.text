@@ -1,0 +1,10 @@
+Objectives
+1. Fetch Rick and Morty Characters from Api 
+2. Display the results on the Dom 
+3. Create a like button users for users to like their favorite characters
+
+Api Info
+- Api host site: https://rickandmortyapi.com/api
+- Character "https://rickandmortyapi.com/api/character
+- Access different pages of charactes "https://rickandmortyapi.com/api/character?page=2"
+* 20 objects per page
