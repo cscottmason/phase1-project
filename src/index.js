@@ -106,6 +106,30 @@ function createCharacterTwo(cast) {
 
 }
 
+function createCharacterThree(cast) {
+    const castThree= document.createElement('div')
+    const castThreeName = document.createElement('h2')
+    const castThreeStatus  = document.createElement('h3')
+    const castThreeLoc = document.createElement('p')
+    const castThreeImage = document.createElement('img')
+    const castThreeContainer = document.querySelector('#character3-container')
+    const likeButton3= document.createElement('button')
+
+
+    likeButton3.id = 'button-3'
+
+    castThreeImage.src = 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
+    castThreeName.textContent = cast.results[3].name
+    castThreeStatus.textContent = cast.results[3].status
+    castThreeLoc.textContent = cast.results[3].location.name
+    likeButton3.textContent = ' Like!'
+
+    castThree.append(castThreeName, castThreeImage, castThreeStatus, castThreeLoc, likeButton3)
+    castThreeContainer.appendChild(castThree)
+
+    return castThreeContainer
+}
+
 
 
 
@@ -130,6 +154,7 @@ function characterAppend(characterList) {
 fetchCharacters().then(character => {
     const characterOne = createCharacterOne(character)
     const characterTwo = createCharacterTwo(character)
+    const characterThree = createCharacterThree(character)
     //console.log(characterList)
     characterAppend(characterOne, characterTwo)
     console.log(characterOne)
@@ -148,6 +173,13 @@ const characterTwoButton = document.getElementsByClassName('button-2');
 
 document.addEventListener('click',function(e){
     if(e.target && e.target.id== 'button-2'){
+          alert('You liked this character!')
+     }
+ });
+
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'button-3'){
           //do something
           alert('You liked this character!')
      }
