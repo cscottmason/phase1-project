@@ -5,51 +5,7 @@ const characterURL = "https://rickandmortyapi.com/api/character/?page=1"
 function fetchCharacters () {
     return fetch (characterURL)
     .then(res => res.json())
-    /*.then(data => {
-        characterResults = data.results
-        console.log(characterResults)
-        for (let i = 0; i < characterResults.length; i++) {
-            
-            let character = characterResults[i]
-            let newCharacters = document.createElement('p')
-            newCharacters.append(character)
-            return newCharacters
-           // document.querySelector('#character-containter').appendChild(character)
-        }
-    })*/
 }
-
-
-  
-
-
-
-
-
-
-//console.log(data.results)
-    //.then( data => {
-        //})
-        // res.forEach(character => {
-            //console.log(character.name + character.status + character.location.name)
-            // });
-            // })
-            //})
-            //}
-        
-        
-    
-    
-
-    
-    
-        
-
-
-    
-  
-
-    //.then(character => 
     
 
 
