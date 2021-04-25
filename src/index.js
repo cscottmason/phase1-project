@@ -64,11 +64,12 @@ function createCharacterOne(cast) {
     const characterContainer = document.querySelector('#character1-container')//document.createElement('div')
     
     characterName.id = 'character-info'
+    castDiv.className = 'character1'
     
     characterImage.src = 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
    characterName.textContent = cast.results[0].name
-   characterStatus.textContent = cast.results[0].status
-   characterLoc.textContent = cast.results[0].location.name
+   characterStatus.textContent = "Satus:" + " " + cast.results[0].status
+   characterLoc.textContent = "Location:" + " " + cast.results[0].location.name
     
    
    castDiv.append(characterName, characterImage, characterStatus, characterLoc);
@@ -93,8 +94,8 @@ function createCharacterTwo(cast) {
 
     castTwoImage.src = 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
     castTwoName.textContent = cast.results[1].name
-    castTwoStatus.textContent = cast.results[1].status
-    castTwoLoc.textContent = cast.results[1].location.name
+    castTwoStatus.textContent = "Satus:" + " " + cast.results[1].status
+    castTwoLoc.textContent = "Location:" + " " + cast.results[1].location.name
     likeButton2.textContent = 'Like!'
 
     castTwo.append(castTwoName, castTwoImage, castTwoStatus, castTwoLoc, likeButton2);
@@ -120,8 +121,8 @@ function createCharacterThree(cast) {
 
     castThreeImage.src = 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
     castThreeName.textContent = cast.results[3].name
-    castThreeStatus.textContent = cast.results[3].status
-    castThreeLoc.textContent = cast.results[3].location.name
+    castThreeStatus.textContent = "Satus:" + " " + cast.results[3].status
+    castThreeLoc.textContent = "Location:" + " " + cast.results[3].location.name
     likeButton3.textContent = ' Like!'
 
     castThree.append(castThreeName, castThreeImage, castThreeStatus, castThreeLoc, likeButton3)
@@ -155,9 +156,8 @@ fetchCharacters().then(character => {
     const characterOne = createCharacterOne(character)
     const characterTwo = createCharacterTwo(character)
     const characterThree = createCharacterThree(character)
-    //console.log(characterList)
-    characterAppend(characterOne, characterTwo)
-    console.log(characterOne)
+    //characterAppend(characterOne, characterTwo)
+    console.log(characterOne, characterTwo, characterThree)
 })
 
 const likeButton = document.querySelector('#button');
